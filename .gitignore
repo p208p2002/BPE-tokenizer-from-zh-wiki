@@ -1,0 +1,6 @@
+*.model
+*.vocab
+*_model_hf
+*_model_sp
+corpus.txt
+v1/*
