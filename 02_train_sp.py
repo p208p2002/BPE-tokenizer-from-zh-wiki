@@ -60,7 +60,7 @@ os.makedirs("zh_wiki_bpe_model_sp",exist_ok=True)
 
 spm.SentencePieceTrainer.train(
     input='data/corpus.txt', 
-    model_prefix='zh_wiki_bpe_model_sp/zh_wiki_bpe', 
+    model_prefix='zh_wiki_bpe_model_sp/zh_wiki_bpe_hf', 
     user_defined_symbols=["，","。","：","？","（","）","「","」"],
     max_sentence_length=2048,
     max_sentencepiece_length=4,
