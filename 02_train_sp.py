@@ -56,17 +56,16 @@ import os
 # --version (show version)  type: bool default: false
 # --minloglevel (Messages logged at a lower level than this don't actually get logged anywhere)  type: int default: 0
 
-os.makedirs("zh_wiki_bpe_model_sp",exist_ok=True)
 
 spm.SentencePieceTrainer.train(
     input='data/corpus.txt', 
-    model_prefix='zh_wiki_bpe_model_sp/zh_wiki_bpe_hf', 
-    user_defined_symbols=["，","。","：","？","（","）","「","」"],
+    model_prefix='zh_en_wiki_bpe_model_sp', 
+    user_defined_symbols=["，","。","：","？","（","）","「","」","；"],
     max_sentence_length=2048,
-    max_sentencepiece_length=4,
+    max_sentencepiece_length=12,
     split_digits=True,
     model_type="bpe",
     byte_fallback=True,
     train_extremely_large_corpus=True,
-    vocab_size=50000
+    vocab_size=32000
 )
