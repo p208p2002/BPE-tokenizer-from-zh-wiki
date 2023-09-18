@@ -61,7 +61,6 @@ spm.SentencePieceTrainer.train(
     input='data/corpus.txt', 
     model_prefix='zh_en_wiki_bpe_model_sp', 
     user_defined_symbols=["，","。","：","？","（","）","「","」","；"],
-    max_sentence_length=2048,
     max_sentencepiece_length=12,
     split_digits=True,
     model_type="bpe",

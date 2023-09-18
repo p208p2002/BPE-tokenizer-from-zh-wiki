@@ -6,7 +6,7 @@ en_dataset = iter(load_dataset("graelo/wikipedia", "20230601.en",streaming=True,
 os.makedirs("data",exist_ok=True)
 
 out_f = open("data/corpus.txt","w",buffering=3*1024*1024)
-for i in range(800000):
+for i in range(2*10**6):
     if i % 2 == 0:
         data = next(dataset)
     else:
